@@ -59,7 +59,7 @@ class HomeController extends Controller
     public function home()
     {
         
-        $articles = Article::all()->sortByDesc("id")->take(4);
+        $articles = Article::all()->sortByDesc("id")->take(6);
         $services = Service::all()->sortByDesc("id")->take(4);
 
         if( $this->lang  == "en" ){
@@ -80,6 +80,10 @@ class HomeController extends Controller
         $pageTitle  = substr($article->title , 0 , 50 );     
         return view('front-end.article', compact('pageTitle' , 'article'));
     }
-
+    public function articles($type){
+        $articles = Article::where('type',$type)->get(); 
+   
+        return view('front-end.articles', compact('type' , 'articles'));
+    }
   
 }

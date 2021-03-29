@@ -25,11 +25,12 @@ $factory->define(App\Models\User::class, function (Faker $faker) {
 $factory->define(App\Models\Configration::class, function (Faker $faker) {
     return [
         'email' => $faker->safeEmail,
-        'en_title' => "El Salem Anti Bugs",
-        'title' =>  "السالم لمكافحة الحشرات",
-        'description' => "شركة السالم لمكافحة الحشرات هى افضل شركة ابادة حشرات بشهادة عملائنا ,نستخدم مبيدات عالية الجودة ,جميع عمالنا مدربين على اتخاذ اللازم فى اصعب المواقف ننتظر مكالماتكم ونسعد بالخدمة",
+        'en_title' => "el Nada",
+        'title' =>  "شركة الندي لنقل الاثاث",
+        'description' => "نحن من الشركات التي توفر خدمه نقل الاثاث السكنى والتجارى والشركات بكل اهتمام معتمدين على احدث الاجهزة في نقل الاثاث في اقل وقت.",
         'en_description' => $faker->text,
-        'home_description' => "",
+        'home_description' => "الانتقال من سكنك القديم الي الجديد فكرة رائعه - لكن هناك مشكله نقل الاثاث فهي ليست سهله اطلاقا فتحتاج الى عمال لديهم الخبره والكفائة ومعدات حديثه لتضمن وصول الاثاث وهو سليم
+        فعليك الاعتماد علينا في هذه المهمه .. نعدك بتوصيل الاثاث في اسرع واعتمد علينا.",
         'en_home_description' => $faker->text,
         'phone' => "01010079798",
         'whatsapp' => "01010079798",
@@ -58,6 +59,7 @@ $factory->define(App\Models\Article::class, function (Faker $faker) {
 
     return [
         'title' => $faker->name,
+        'type' => 'عزل',
         'en_title' => $faker->name,
         'description' => " قبت بالولايات في حين. ان يقوم الدنمارك أخذ, الأمم وقامت المتّبعة ان وقد, كل دول واتّجه وبالتحديد،. قد إحكام الأولى وقوعها، قام, قد بين أواخر الصفحات, عل شيء لإعلان الأمور المتحدة. أعمال باستحداث عن حين, كل عدد لأداء أوروبا الفرنسية, بهيئة اليها لان قد. ومن كثيرة الشّعبين ثم, فصل ٣٠ أوسع الثالث. لان هو ويتّفق الأهداف. كل اتفاق أفريقيا لها, دفّة الإتحاد به، بـ, لإعادة مقاومة الشتوية مكن تم. ",
         'en_description' => $faker->text ,
@@ -67,9 +69,8 @@ $factory->define(App\Models\Article::class, function (Faker $faker) {
 $factory->define(App\Models\Service::class, function (Faker $faker) {
 
     return [
-        'name' => $faker->name ,
-        'description' => "ابادة فورية ونهائية لجميع الزواحف كالثعابين بدون رجعه
-        ",
+        'name' => "ننقل معدات المزارع",
+        'description' => "نستطيع ايضا نقل معدات المزارع والادوات اللازمه",
         'user_id' =>1 ,
     ];
 });

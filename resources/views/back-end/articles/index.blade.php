@@ -27,6 +27,7 @@
                             <th>العنوان</th>
                             {{-- <th> العنوان بالانجليزي</th> --}}
                                 <th>الوصف</th>
+                                <th>النوع</th>
                                 <th>الصورة</th>
                                 <th>المستخدم</th>
                                 <th></th>
@@ -37,6 +38,7 @@
                                  <tr>
                                     <td> {{$row_num++}}</td>
                                     <td>{{$item->title}}</td>
+                                    <td>{{$item->type}}</td>
                                     {{-- <td>{{$item->en_title}}</td> --}}
                                     <td width="30%">{!!$item->description!!}</td>
                                     <td>  <img src="{{asset($item->image)}}" height="60px" width="60px"></td>

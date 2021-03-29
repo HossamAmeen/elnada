@@ -23,3 +23,4 @@ Route::prefix('admin')->group(function(){
 });
 Route::get('/', 'FrontEnd\HomeController@home')->name('home');
 Route::get('article/{articleId}', 'FrontEnd\HomeController@article')->name('article');
+Route::get('articles/{type}', 'FrontEnd\HomeController@articles')->name('articles');

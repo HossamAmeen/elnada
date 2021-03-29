@@ -11,7 +11,22 @@
           </div>
            @enderror
     </div>
- </div>  
+ </div>
+ @php $input = "type"; @endphp
+ <div class="form-group">
+    <label class="col-lg-2 control-label">نوع المقال</label>
+     <div class="col-lg-4">
+          <select class="form-control" name="{{$input}}">
+            <option @if (isset($row) && $row->type == "عزل") selected @endif>عزل</option>
+            <option @if (isset($row) && $row->type == "نقل عفش") selected @endif>نقل عفش</option>
+          </select>
+           @error($input)
+           <div class="alert alert-danger" role="alert" style="text-align: center">
+            <strong>{{ $message }}</strong>
+          </div>
+           @enderror
+    </div>
+ </div>    
  {{-- @php $input = "en_title"; @endphp
  <div class="form-group">
     <label class="col-lg-2 control-label"> عنوان المقال بالانجلزي</label>
