@@ -25,9 +25,11 @@
                             <tr>
                             <th>#</th>
                             <th>العنوان</th>
-                            {{-- <th> العنوان بالانجليزي</th> --}}
+                           
                                 <th>الوصف</th>
                                 <th>النوع</th>
+                                <th>رقم نقل العفش</th>
+                                <th>رقم عزل</th>
                                 <th>الصورة</th>
                                 <th>المستخدم</th>
                                 <th></th>
@@ -39,8 +41,9 @@
                                     <td> {{$row_num++}}</td>
                                     <td>{{$item->title}}</td>
                                     <td>{{$item->type}}</td>
-                                    {{-- <td>{{$item->en_title}}</td> --}}
-                                    <td width="30%">{!!$item->description!!}</td>
+                                    <td>{{$item->phone}}</td>
+                                    <td>{{$item->phone2}}</td>
+                                    <td width="30%">  {!! mb_substr($item->description,0,200,'UTF-8') !!}.....</td>
                                     <td>  <img src="{{asset($item->image)}}" height="60px" width="60px"></td>
                                     <td>{{ isset($item->user) ? $item->user->user_name : '' }}</td>
                                     <td>

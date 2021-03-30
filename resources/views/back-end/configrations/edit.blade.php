@@ -98,7 +98,21 @@
 
                             @php $input = "phone"; @endphp
                             <div class="form-group">
-                                <label class="col-lg-2 control-label">الهاتف</label>
+                                <label class="col-lg-2 control-label">هاتف نقل العفش</label>
+
+                                <div class="col-lg-10">
+                                    <input type="text" name="{{ $input }}"  value="{{ isset($row) ? $row->{$input} : Request::old($input) }} "
+                                      class="form-control">
+                                      @error($input)
+                                      <span class="invalid-feedback" role="alert">
+                                               <strong>{{ $message }}</strong>
+                                      </span>
+                                      @enderror
+                                </div>
+                            </div>
+                            @php $input = "phone2"; @endphp
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">هاتف العزل</label>
 
                                 <div class="col-lg-10">
                                     <input type="text" name="{{ $input }}"  value="{{ isset($row) ? $row->{$input} : Request::old($input) }} "

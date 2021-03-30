@@ -34,7 +34,7 @@
               <div class="card-body" style="padding: 1rem 0px;">
                 <h5 class="card-title text-right"><b></b></h5>
                 <p class="card-text">
-                  {{$article->description}}
+                  {!!$article->description!!}
                 </p>
               </div>
             </div>

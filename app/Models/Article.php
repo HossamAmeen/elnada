@@ -10,7 +10,7 @@ class Article extends Model
 
     
     protected $fillable = [
-        'title' , 'type','description', 'en_title' , 'en_description', 'image' , "user_id"
+        'title' ,'phone','phone2', 'type','description', 'en_title' , 'en_description', 'image' , "user_id"
     ];
     public function user(){
         return $this->belongsTo(User::class);
