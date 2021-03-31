@@ -22,7 +22,11 @@
                         <form class="form-horizontal ls_form ls_form_horizontal" action="{{route('configrations.update', ['id' => $row])}}" method="POST">
                             @csrf
                             {{ method_field('put') }}
-
+                            @if (session()->get('action') )
+                            <div class="alert alert-success">
+                                <strong>{{session()->get('action')}}</strong>
+                            </div>
+                        @endif
                             @php $input = "title"; @endphp
                             <div class="form-group">
                                 <label class="col-lg-2 control-label">اسم الموقع</label>
