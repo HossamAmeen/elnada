@@ -41,7 +41,7 @@
         @enderror
  </div>
  </div>  
- @php $input = "phone"; @endphp
+ @php $input = "phone2"; @endphp
  <div class="form-group">
     <label class="col-lg-2 control-label">رقم التلفون (عزل)</label>
     <div class="col-lg-4">
