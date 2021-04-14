@@ -31,7 +31,7 @@
                                 <th>رقم نقل العفش</th>
                                 <th>رقم عزل</th>
                                 <th>الصورة</th>
-                                <th>المستخدم</th>
+                                {{-- <th>المستخدم</th> --}}
                                 <th></th>
                             </tr>
                         </thead>
@@ -46,7 +46,7 @@
                                     <td>{{$item->phone2}}</td>
                                    
                                     <td>  <img src="{{asset($item->image)}}" height="60px" width="60px"></td>
-                                    <td>{{ isset($item->user) ? $item->user->user_name : '' }}</td>
+                                    {{-- <td>{{ isset($item->user) ? $item->user->user_name : '' }}</td> --}}
                                     <td>
                                      @include('back-end.shared.buttons.delete')
                                     </td>
