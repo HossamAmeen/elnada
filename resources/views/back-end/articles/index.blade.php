@@ -40,7 +40,7 @@
                                  <tr>
                                     <td> {{$row_num++}}</td>
                                     <td>{{$item->title}}</td>
-                                    <td width="30%">     {{ strip_tags($article->description) }}</td>
+                                    <td width="30%">     {{ strip_tags($item->description) }}</td>
                                     <td>{{$item->type}}</td>
                                     <td>{{$item->phone}}</td>
                                     <td>{{$item->phone2}}</td>
