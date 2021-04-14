@@ -40,10 +40,11 @@
                                  <tr>
                                     <td> {{$row_num++}}</td>
                                     <td>{{$item->title}}</td>
+                                    <td width="30%">     {{ strip_tags($article->description) }}</td>
                                     <td>{{$item->type}}</td>
                                     <td>{{$item->phone}}</td>
                                     <td>{{$item->phone2}}</td>
-                                    <td width="30%">  {!! mb_substr($item->description,0,200,'UTF-8') !!}.....</td>
+                                   
                                     <td>  <img src="{{asset($item->image)}}" height="60px" width="60px"></td>
                                     <td>{{ isset($item->user) ? $item->user->user_name : '' }}</td>
                                     <td>
