@@ -10,18 +10,35 @@
         </div>
       </div>
       <div class="row">
+        @if(isset($article)  ) 
+           
+          <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0 contact-link">
+            <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+            <div><a href="tel:{{$article->phone}}">{{$article->phone}}</a>
+              @if($article->type == "نقل عفش")
+              <br><span style="font-size: 80%">هاتف  نقل العفش</span>          
+              @else
+              <br><span style="font-size: 80%">هاتف العزل</span>  
+              @endif   
+            </div>
+          </div>
+           
+        @else
+
         <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0 contact-link">
           <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-          <div><a href="tel:{{$article->phone ?? $configration->phone}}">{{$article->phone ?? $configration->phone}}</a>
-            {{-- <br><span style="font-size: 80%">هاتف  نقل العفش</span> --}}
+          <div><a href="tel:{{$configration->phone}}">{{ $configration->phone}}</a>
+            <br><span style="font-size: 80%">هاتف  نقل العفش</span>
           </div>
         </div>
         <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0 contact-link">
-          <i class="fab fa-whatsapp fa-3x mb-3 text-muted"></i>
-          <div><a href="https://wa.me/{{$article->phone2 ?? $configration->whatsapp}}">{{$article->phone2 ?? $configration->whatsapp}}</a>
-            {{-- <br><span style="font-size: 80%">هاتف الواتس</span> --}}
+          <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+          <div><a href="tel:{{$configration->phone2}}">{{$configration->phone2}}</a>
+            <br><span style="font-size: 80%">هاتف العزل</span>
           </div>
         </div>
+        @endif
+       
         <div class="col-lg-4 mr-auto text-center contact-link">
           <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
           <a class="d-block" href="mailto:{{$configration->email}}">{{$configration->email}}</a>
@@ -70,7 +87,7 @@
 </body>
 <script>
   $("#callPhone").click(function () {
-    window.location.href = "tel:+{{$configration->phone}}";
+    window.location.href = "tel:+{{$article->phone ?? $configration->phone}}";
   });
   
 </script>

@@ -28,16 +28,16 @@
       </div>
       <div class="container-fluid">
         <div class="row articles-row card-deck">
-          @foreach ($articles as $article)
+          @foreach ($articles as $articleItem)
           <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 item-col">
             <div class="card click-div">
-              <a href="{{url('article/'.$article->id)}}">
-                <img src="{{asset($article->image)}}" class="card-img-top" alt="...">
+              <a href="{{url('article/'.$articleItem->id)}}">
+                <img src="{{asset($articleItem->image)}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title text-right"><b>{{$article->title}}</b></h5>
+                  <h5 class="card-title text-right"><b>{{$articleItem->title}}</b></h5>
                   <p class="card-text">
                     {{-- {!! mb_substr($article->description,0,200,'UTF-8') !!}..... --}}
-                    {{ strip_tags($article->description) }}
+                    {{ strip_tags($articleItem->description) }}
                   </p>
                 </div>
               </a>
