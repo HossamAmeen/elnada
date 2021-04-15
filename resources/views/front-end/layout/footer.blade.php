@@ -16,7 +16,7 @@
             <br><span style="font-size: 80%">هاتف  نقل العفش</span></div>
         </div>
         <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0 contact-link">
-          <i class="fas fa-whatsapp fa-3x mb-3 text-muted"></i>
+          <i class="fab fa-whatsapp fa-3x mb-3 text-muted"></i>
           <div><a href="tel:{{$article->phone2 ?? $configration->whatsapp}}">{{$article->phone2 ?? $configration->whatsapp}}</a>
             <br><span style="font-size: 80%">هاتف الواتس</span></div>
         </div>
@@ -51,14 +51,12 @@
   <button type="button" id="callPhone" class="btn floatingBtn call">
     <i class="fas fa-phone-alt"></i>
   </button>
-  <button type="button" id="whatsapp" class="btn floatingBtn call">
-    <i class="fab fa-whatsapp"></i>
-  </button>
-  {{-- <a href="https://wa.me/{{ $configration->whatsapp }}" target="_blank">
+  
+  <a href="https://wa.me/{{ $configration->whatsapp }}" target="_blank">
     <button type="button" class="btn floatingBtn whatspp">
       <i class="fab fa-whatsapp"></i>
     </button>
-  </a> --}}
+  </a>
   {{-- <a href="https://api.whatsapp.com/send?phone=+{{ $configration->whatsapp }}" target="_blank">
     <button type="button" class="btn floatingBtn whatspp">
     
@@ -72,7 +70,5 @@
   $("#callPhone").click(function () {
     window.location.href = "tel:+{{$configration->phone}}";
   });
-    $("#whatsapp").click(function () {
-    window.location.href = "tel:+{{$configration->whatsapp}}";
-  });
+  
 </script>
