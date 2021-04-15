@@ -54,7 +54,7 @@
     <i class="fas fa-phone-alt"></i>
   </button>
   
-  <a href="https://wa.me/{{ $configration->whatsapp }}" target="_blank">
+  <a href="https://wa.me/{{$article->phone2 ?? $configration->whatsapp }}" target="_blank">
     <button type="button" class="btn floatingBtn whatspp">
       <i class="fab fa-whatsapp"></i>
     </button>

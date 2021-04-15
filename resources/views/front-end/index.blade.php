@@ -72,13 +72,13 @@
     <div id="portfolio">
       <div class="container-fluid p-0">
         <div class="row no-gutters">
-          @foreach ($articles as $article)
+          @foreach ($articles as $articleItem)
           <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="{{url('article/'.$article->id)}}">
-              <img class="img-fluid" src="{{asset($article->image)}}" alt="" />
+            <a class="portfolio-box" href="{{url('article/'.$articleItem->id)}}">
+              <img class="img-fluid" src="{{asset($articleItem->image)}}" alt="" />
               <div class="portfolio-box-caption">
                 <div class="project-category text-white-50"></div>
-                <div class="project-name">{{$article->title}}</div>
+                <div class="project-name">{{$articleItem->title}}</div>
               </div>
             </a>
           </div>

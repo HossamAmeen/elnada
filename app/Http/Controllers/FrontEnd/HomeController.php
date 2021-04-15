@@ -69,7 +69,7 @@ class HomeController extends Controller
         {
             $pageTitle = "الرئيسيه";
         }
-        
+      
         return view("front-end.index" , compact('pageTitle'  ,'articles', 'services'));
     }
     public function article($id){
