@@ -18,7 +18,7 @@
         </div>
         <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0 contact-link">
           <i class="fab fa-whatsapp fa-3x mb-3 text-muted"></i>
-          <div><a href="tel:{{$article->phone2 ?? $configration->whatsapp}}">{{$article->phone2 ?? $configration->whatsapp}}</a>
+          <div><a href="https://wa.me/{{$article->phone2 ?? $configration->whatsapp}}">{{$article->phone2 ?? $configration->whatsapp}}</a>
             {{-- <br><span style="font-size: 80%">هاتف الواتس</span> --}}
           </div>
         </div>
