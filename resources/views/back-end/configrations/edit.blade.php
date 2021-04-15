@@ -142,7 +142,7 @@
                                       @enderror
                                 </div>
                             </div>
-                            @php $input = "video"; @endphp
+                            {{-- @php $input = "video"; @endphp
                             <div class="form-group">
                                 <label class="col-lg-2 control-label">رابط الفديو الأول</label>
 
@@ -169,7 +169,7 @@
                                       </span>
                                       @enderror
                                 </div>
-                            </div>
+                            </div> --}}
                              @php $input = "youtube"; @endphp
                             <div class="form-group">
                                 <label class="col-lg-2 control-label">رابط قناة اليوتيوب</label>

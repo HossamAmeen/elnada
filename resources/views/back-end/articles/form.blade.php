@@ -29,7 +29,7 @@
  </div>    
  @php $input = "phone"; @endphp
  <div class="form-group">
-    <label class="col-lg-2 control-label">رقم التلفون (نقل العفش)</label>
+    <label class="col-lg-2 control-label">رقم التلفون </label>
     <div class="col-lg-4">
       <input type="text" name="{{ $input }}"   @if(isset($row)) value="{{$row->$input}}" @else
       value="{{Request::old($input)}}" @endif
@@ -43,7 +43,7 @@
  </div>  
  @php $input = "phone2"; @endphp
  <div class="form-group">
-    <label class="col-lg-2 control-label">رقم التلفون (عزل)</label>
+    <label class="col-lg-2 control-label">رقم الواتس</label>
     <div class="col-lg-4">
       <input type="text" name="{{ $input }}"   @if(isset($row)) value="{{$row->$input}}" @else
       value="{{Request::old($input)}}" @endif
