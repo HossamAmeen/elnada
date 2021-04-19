@@ -48,10 +48,9 @@ class HomeController extends Controller
         $pageTitle  = substr($article->title , 0 , 50 );     
    
         $type =  $article->type;
-        if($type =="عزل")
-        $phone = $this->phone2  ; 
-        else
-        $phone = $this->phone;
+        
+        $phone = $article->phone  ; 
+       
         return view('front-end.article', compact('pageTitle' ,'type', 'article' , 'phone'));
     }
     public function articles($type){
