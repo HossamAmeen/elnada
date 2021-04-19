@@ -128,7 +128,7 @@
                                       @enderror
                                 </div>
                             </div>
-                            @php $input = "whatsapp"; @endphp
+                            {{-- @php $input = "whatsapp"; @endphp
                             <div class="form-group">
                                 <label class="col-lg-2 control-label">whatsapp</label>
 
@@ -141,7 +141,7 @@
                                       </span>
                                       @enderror
                                 </div>
-                            </div>
+                            </div> --}}
                             {{-- @php $input = "video"; @endphp
                             <div class="form-group">
                                 <label class="col-lg-2 control-label">رابط الفديو الأول</label>

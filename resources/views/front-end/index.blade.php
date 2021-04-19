@@ -30,7 +30,7 @@
             <p class="text-white-75 font-weight-bold mb-5">
               {{$configration->home_description}}
             </p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="tel:{{$configration->phone}}">اتصل بنا</a>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="tel:{{$phone}}">اتصل بنا</a>
           </div>
         </div>
       </div>
@@ -92,7 +92,7 @@
     <section class="page-section bg-dark text-white">
       <div class="container text-center">
         <h2 class="mb-4">تواصل مع شركة الندى ونصلك اينما كنت</h2>
-        <a class="btn btn-light btn-xl" href= "tel:+{{$configration->phone}}">اتصل بنا</a>
+        <a class="btn btn-light btn-xl" href= "tel:+{{$phone}}">اتصل بنا</a>
       </div>
     </section>
     

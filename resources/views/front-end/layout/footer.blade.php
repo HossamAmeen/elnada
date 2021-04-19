@@ -10,84 +10,69 @@
         </div>
       </div>
       <div class="row">
-        @if(isset($article)  ) 
-           
-          <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0 contact-link">
+        @if($type == "all")
+        <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0 contact-link">
+          <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+          <div>
+              <a href="tel:{{$phone}}">+{{$phone}}</a>
+              <br><span style="font-size: 80%">هاتف  نقل العفش</span>  
+            </div>
+        </div>
+        <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0 contact-link">
             <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-            <div><a href="tel:{{$article->phone}}">{{$article->phone}}</a>
-              @if($article->type == "نقل عفش")
-              <br><span style="font-size: 80%">هاتف  نقل العفش</span>          
-              @else
-              <br><span style="font-size: 80%">هاتف العزل</span>  
-              @endif   
+            <div>
+                <a href="tel:{{$phone2}}">+{{$phone2}}</a>
+                <br><span style="font-size: 80%">هاتف العزل</span>
             </div>
           </div>
-           
-        @else
-
+        
+        @else 
         <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0 contact-link">
-          <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-          <div><a href="tel:{{$configration->phone}}">{{ $configration->phone}}</a>
-            <br><span style="font-size: 80%">هاتف  نقل العفش</span>
+            <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+            <div><a href="tel:{{$phone}}">+{{$phone}}</a><br><span style="font-size: 80%">{{$type}}</span></div>
           </div>
-        </div>
-        <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0 contact-link">
-          <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-          <div><a href="tel:{{$configration->phone2}}">{{$configration->phone2}}</a>
-            <br><span style="font-size: 80%">هاتف العزل</span>
-          </div>
-        </div>
         @endif
-       
+
         <div class="col-lg-4 mr-auto text-center contact-link">
-          <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-          <a class="d-block" href="mailto:{{$configration->email}}">{{$configration->email}}</a>
-        </div>
-      </div>
+            <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+            <a class="d-block" href="mailto:{{$configration->email}}">{{$configration->email}}</a>
+          </div>
     </div>
-  </section>
-  
+    </div>
+</section>
+
   <footer class="bg-light py-3">
     <div class="container">
       <div class="row">
         <div class="col-5">
           <div class="footer-sm-r">
             <a href="{{$configration->facebook}}" target="_blank">
-              <img class="footer-icon" src="{{asset('front-site/assets/img/facebookIcon.png')}}">
-            </a>
-            <a href="{{$configration->instagram}}" target="_blank">
-              <img class="footer-icon" src="{{asset('front-site/assets/img/instagram.png')}}">
-            </a>
-            <a href="https://api.whatsapp.com/send?phone=+{{ $configration->whatsapp }}" target="_blank">
-              <img class="footer-icon" src="{{asset('front-site/assets/img/whatsappIcon.png')}}">
+                <img class="footer-icon" src="{{asset('front-site/assets/img/facebookIcon.png')}}">
+              </a>
+              <a href="{{$configration->instagram}}" target="_blank">
+                <img class="footer-icon" src="{{asset('front-site/assets/img/instagram.png')}}">
+              </a>
+            <a href="https://api.whatsapp.com/send?phone=+{{$phone}}" target="_blank">
+                <img class="footer-icon" src="{{asset('front-site/assets/img/whatsappIcon.png')}}">
             </a>
           </div>
         </div>
       </div>
     </div>
   </footer>
-
   <button type="button" id="callPhone" class="btn floatingBtn call">
     <i class="fas fa-phone-alt"></i>
   </button>
-  
-  <a href="https://wa.me/{{$article->phone2 ?? $configration->whatsapp }}" target="_blank">
+  <a href="https://api.whatsapp.com/send?phone=+{{$phone}}" target="_blank">
     <button type="button" class="btn floatingBtn whatspp">
       <i class="fab fa-whatsapp"></i>
     </button>
   </a>
-  {{-- <a href="https://api.whatsapp.com/send?phone=+{{ $configration->whatsapp }}" target="_blank">
-    <button type="button" class="btn floatingBtn whatspp">
-    
-    </button>
-  </a> --}}
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="{{asset('front-site/assets/js/scripts.js')}}"></script>
-</body>
-<script>
-  $("#callPhone").click(function () {
-    window.location.href = "tel:+{{$article->phone ?? $configration->phone}}";
-  });
-  
-</script>
+  <script src="assets/js/scripts.js"></script>
+  <script>
+    $("#callPhone").click(function () {
+      window.location.href = "tel:+{{$phone}}";
+    });
+  </script>
