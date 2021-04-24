@@ -92,7 +92,7 @@
     <section class="page-section bg-dark text-white">
       <div class="container text-center">
         <h2 class="mb-4">تواصل مع شركة الندى ونصلك اينما كنت</h2>
-        <a class="btn btn-light btn-xl" href= "tel:+{{$phone}}">اتصل بنا</a>
+        <a class="btn btn-light btn-xl" href= "tel:{{$phone}}">اتصل بنا</a>
       </div>
     </section>
     

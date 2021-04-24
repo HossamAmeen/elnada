@@ -266,7 +266,7 @@
       <i class="fas fa-phone-alt"></i>
     </button>
     @if (isset($configration->whatsapp))
-    <a href="https://api.whatsapp.com/send?phone=+{{$configration->whatsapp}}" target="_blank">
+    <a href="https://api.whatsapp.com/send?phone={{$configration->whatsapp}}" target="_blank">
       <button type="button" class="btn floatingBtn whatspp">
         <i class="fab fa-whatsapp"></i>
       </button>
@@ -279,7 +279,7 @@
   <script src="{{asset('front-site/assets/js/script.js')}}"></script>
   <script>
     $("#scrollToTop").click(function () {
-      window.location.href = "tel:+{{$configration->phone}}";
+      window.location.href = "tel:{{$configration->phone}}";
     });
   </script>
 </body>
