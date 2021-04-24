@@ -14,14 +14,14 @@
         <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0 contact-link">
           <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
           <div>
-              <a href="tel:{{$phone}}">+{{$phone}}</a>
+              <a href="tel:{{$phone}}">{{$phone}}</a>
               <br><span style="font-size: 80%">هاتف  نقل العفش</span>  
             </div>
         </div>
         <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0 contact-link">
             <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
             <div>
-                <a href="tel:{{$phone2}}">+{{$phone2}}</a>
+                <a href="tel:{{$phone2}}">{{$phone2}}</a>
                 <br><span style="font-size: 80%">هاتف العزل</span>
             </div>
           </div>
@@ -29,7 +29,7 @@
         @else 
         <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0 contact-link">
             <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-            <div><a href="tel:{{$phone}}">+{{$phone}}</a><br><span style="font-size: 80%">{{$type}}</span></div>
+            <div><a href="tel:{{$phone}}">{{$phone}}</a><br><span style="font-size: 80%">{{$type}}</span></div>
           </div>
         @endif
 
@@ -52,7 +52,7 @@
               <a href="{{$configration->instagram}}" target="_blank">
                 <img class="footer-icon" src="{{asset('front-site/assets/img/instagram.png')}}">
               </a>
-            <a href="https://api.whatsapp.com/send?phone=+{{$phone}}" target="_blank">
+            <a href="https://api.whatsapp.com/send?phone={{$phone}}" target="_blank">
                 <img class="footer-icon" src="{{asset('front-site/assets/img/whatsappIcon.png')}}">
             </a>
           </div>
@@ -63,7 +63,7 @@
   <button type="button" id="callPhone" class="btn floatingBtn call">
     <i class="fas fa-phone-alt"></i>
   </button>
-  <a href="https://api.whatsapp.com/send?phone=+{{$phone}}" target="_blank">
+  <a href="https://api.whatsapp.com/send?phone={{$phone}}" target="_blank">
     <button type="button" class="btn floatingBtn whatspp">
       <i class="fab fa-whatsapp"></i>
     </button>
@@ -73,6 +73,6 @@
   <script src="assets/js/scripts.js"></script>
   <script>
     $("#callPhone").click(function () {
-      window.location.href = "tel:+{{$phone}}";
+      window.location.href = "tel:{{$phone}}";
     });
   </script>
